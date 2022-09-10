@@ -1,7 +1,4 @@
 /.idea/**
-/.idea/inspectionProfiles/
-/.idea/.gitignore
-/.idea/misc.xml
-/.idea/modules.xml
-/.idea/vcs.xml
-/.idea/workspace.xml
+ngrok_pusblisher.iml
+Publisher/__pycache__/__init__.cpython-310.pyc
+Publisher/__pycache__/Publisher.cpython-310.pyc
