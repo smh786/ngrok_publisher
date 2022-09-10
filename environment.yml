@@ -1,0 +1,9 @@
+name: ngrok_publisher
+dependencies:
+  - python=3.10.0
+  - beautifulsoup4
+  - requests
+  - pip
+  - pip:
+      - secure-smtplib
+      - ngrok-api
