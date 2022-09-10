@@ -1,2 +1,6 @@
-".idea/*"
-*.xml
+.idea/*
+
+misc.xml
+modules.xml
+ngrok_pusblisher.iml
+Project_Default.xml
