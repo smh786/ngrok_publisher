@@ -1,6 +1,7 @@
-.idea/*
-
-.idea/misc.xml
-modules.xml
-.idea/ngrok_pusblisher.iml
-Project_Default.xml
+/.idea/*
+/.idea/inspectionProfiles/
+/.idea/.gitignore
+/.idea/misc.xml
+/.idea/modules.xml
+/.idea/vcs.xml
+/.idea/workspace.xml
