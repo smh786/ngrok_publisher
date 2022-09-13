@@ -1,5 +1,4 @@
-import ngrok
-import os
+import requests
 
 
 def parse_public_ngrok_url(url: str) -> tuple:
@@ -9,9 +8,17 @@ def parse_public_ngrok_url(url: str) -> tuple:
     return host, port
 
 
+def get_ngrok_public_url(token: str):
+    headers = {
+        "Authorization": f"Bearer {token}",
+        "Ngrok-Version": f"2"
+    }
+    r = requests.get(url="https://api.ngrok.com/tunnels", headers= headers)
+    return r.json()['tunnels'][0]['public_url']
+
+
 class Publisher:
     def __init__(self, api_key: str):
-        self.client = ngrok.Client(api_key=api_key)
-        for t in self.client.tunnels.list():
-            self.host, self.port = parse_public_ngrok_url(t.public_url)
-            break
+        self.public_url = get_ngrok_public_url(api_key)
+        self.host, self.port = parse_public_ngrok_url(self.public_url)
+
