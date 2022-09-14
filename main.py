@@ -11,9 +11,12 @@ def main():
     for arg in args:
         if arg == 'das':
             p = Publisher(das_key)
-            print(f"ssh root@{p.host} -p {p.port}")
+            for tunnel in p.tunnels:
+                print(tunnel['public_url'])
         elif arg == 'adcp':
             p = Publisher(adcp_key)
+            for tunnel in p.tunnels:
+                print(tunnel['public_url'])
 
 
 if __name__ == "__main__":
